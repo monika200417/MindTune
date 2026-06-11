@@ -1,4 +1,12 @@
-export type Emotion = "Calm" | "Happy" | "Sad" | "Anxiety" | "Anger";
+export type Emotion =
+  | "Calm"
+  | "Focused"
+  | "Happy"
+  | "Stressed"
+  | "Anxious"
+  | "Sad"
+  | "Angry"
+  | "Tired";
 
 export type BandValues = {
   delta: number;
