@@ -22,18 +22,36 @@ export const emotionMeta: Record<
     message: "Theta activity is elevated. MindTune selected a gentle lift.",
     track: "Morning Light"
   },
-  Anxiety: {
+  Anxious: {
     color: "#7968a8",
     soft: "#eee9f8",
     message: "Mixed high-frequency activity suggests elevated arousal.",
     track: "Quiet Current"
   },
-  Anger: {
+  Angry: {
     color: "#c76552",
     soft: "#f9e5df",
     message: "Beta activity is elevated. A lower-arousal track is playing.",
     track: "Slow Tides"
-  }
+  },
+Focused: {
+  color: "#3f6fd1",
+  soft: "#e3ebff",
+  message: "Steady beta activity suggests deep concentration and task engagement.",
+  track: "Deep Focus"
+},
+Stressed: {
+  color: "#e07a2d",
+  soft: "#fff0e3",
+  message: "Elevated beta activity may indicate mental overload or stress.",
+  track: "Ease Mind"
+},
+Tired: {
+  color: "#6c757d",
+  soft: "#edf0f2",
+  message: "Lower alertness patterns suggest fatigue and reduced mental energy.",
+  track: "Morning Boost"
+}
 };
 
 export const initialReadings: LiveReading[] = [
@@ -47,7 +65,7 @@ export const initialReadings: LiveReading[] = [
 
 export const sessions: Session[] = [
   { id: "MT-2406", date: "Jun 10, 2026", time: "9:18 AM", duration: "24 min", dominantEmotion: "Calm", confidence: 84, signal: 94, track: "Open Sky" },
-  { id: "MT-2306", date: "Jun 9, 2026", time: "8:42 PM", duration: "18 min", dominantEmotion: "Anxiety", confidence: 76, signal: 88, track: "Quiet Current" },
+  { id: "MT-2306", date: "Jun 9, 2026", time: "8:42 PM", duration: "18 min", dominantEmotion: "Anxious", confidence: 76, signal: 88, track: "Quiet Current" },
   { id: "MT-2206", date: "Jun 8, 2026", time: "7:30 AM", duration: "31 min", dominantEmotion: "Happy", confidence: 81, signal: 92, track: "Golden Hour" },
   { id: "MT-2106", date: "Jun 7, 2026", time: "6:14 PM", duration: "14 min", dominantEmotion: "Sad", confidence: 72, signal: 85, track: "Morning Light" },
   { id: "MT-2006", date: "Jun 6, 2026", time: "9:02 AM", duration: "27 min", dominantEmotion: "Calm", confidence: 87, signal: 95, track: "Open Sky" }
@@ -57,24 +75,30 @@ export const weeklyTrend = [
   { day: "Thu", calm: 36, happy: 22, elevated: 42 },
   { day: "Fri", calm: 42, happy: 25, elevated: 33 },
   { day: "Sat", calm: 48, happy: 28, elevated: 24 },
-  { day: "Sun", calm: 40, happy: 34, elevated: 26 },
+  { day: "Sun", calm: 50, happy: 30, elevated: 20 },  
   { day: "Mon", calm: 51, happy: 24, elevated: 25 },
   { day: "Tue", calm: 55, happy: 27, elevated: 18 },
   { day: "Wed", calm: 61, happy: 25, elevated: 14 }
 ];
 
 export const distribution = [
-  { name: "Calm", value: 44, fill: "#1f8f7a" },
-  { name: "Happy", value: 24, fill: "#d99b28" },
-  { name: "Anxiety", value: 15, fill: "#7968a8" },
-  { name: "Sad", value: 10, fill: "#5378a8" },
-  { name: "Anger", value: 7, fill: "#c76552" }
+  { name: "Calm", value: 28, fill: "#1f8f7a" },
+  { name: "Happy", value: 18, fill: "#d99b28" },
+  { name: "Focused", value: 16, fill: "#3f6fd1" },
+  { name: "Anxious", value: 12, fill: "#7968a8" },
+  { name: "Stressed", value: 10, fill: "#e07a2d" },
+  { name: "Sad", value: 7, fill: "#5378a8" },
+  { name: "Angry", value: 4, fill: "#c76552" },
+  { name: "Tired", value: 5, fill: "#6c757d" }
 ];
 
 export const musicOptions: Record<Emotion, string[]> = {
   Calm: ["Open Sky", "Forest Window", "Still Water"],
   Happy: ["Golden Hour", "Sunlit Walk", "Soft Bloom"],
   Sad: ["Morning Light", "Small Steps", "New Day"],
-  Anxiety: ["Quiet Current", "Deep Exhale", "Gentle Rain"],
-  Anger: ["Slow Tides", "Low Horizon", "Cool Air"]
+  Anxious: ["Quiet Current", "Deep Exhale", "Gentle Rain"],
+  Angry: ["Slow Tides", "Low Horizon", "Cool Air"],
+Focused: ["Deep Focus", "Flow State", "Code Mode"],
+Stressed: ["Ease Mind", "Gentle Waves", "Stress Relief"],
+Tired: ["Morning Boost", "Fresh Start", "Energy Rise"]
 };
