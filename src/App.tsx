@@ -382,7 +382,7 @@ function LiveSession() {
     const simulator = window.setInterval(() => {
       setReadings((items) => {
         const last = items.at(-1)!;
-        const nextEmotion: Emotion = Math.random() > 0.83 ? (["Calm", "Happy", "Anxiety"] as Emotion[])[Math.floor(Math.random() * 3)] : last.emotion;
+        const nextEmotion: Emotion = Math.random() > 0.83 ? (["Calm", "Happy", "Anxious", "Sad", "Angry"] as Emotion[])[Math.floor(Math.random() * 5)] : last.emotion;
         const vary = (value: number, amount = 5) => Math.max(5, Math.round(value + (Math.random() - 0.5) * amount));
         const now = new Date();
         return [...items.slice(-11), {
@@ -547,7 +547,7 @@ function Sessions() {
         <div className="table-toolbar">
           <div className="search-field"><Search size={17} /><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search sessions" /></div>
           <div className="filter-buttons">
-            {(["All", "Calm", "Happy", "Anxiety", "Sad"] as const).map((item) => (
+            {(["All", "Calm", "Happy", "Anxious", "Sad", "Angry"] as const).map((item) => (
               <button key={item} onClick={() => setFilter(item)} className={filter === item ? "active" : ""}>{item}</button>
             ))}
           </div>
@@ -684,7 +684,14 @@ function Analytics() {
 
 function MusicTherapy() {
   const [selected, setSelected] = useState<Record<Emotion, string>>({
-    Calm: "Open Sky", Happy: "Golden Hour", Sad: "Morning Light", Anxiety: "Quiet Current", Anger: "Slow Tides"
+    Calm: "Open Sky",
+    Happy: "Golden Hour",
+    Sad: "Morning Light",
+    Anxious: "Quiet Current",
+    Angry: "Slow Tides",
+    Focused: "Deep Focus",
+    Stressed: "Ease Mind",
+    Tired: "Morning Boost"
   });
   const [playing, setPlaying] = useState<string | null>("Open Sky");
 
