@@ -167,7 +167,7 @@ These are wellness trends, not health conclusions.
 ### `/dashboard/music`
 
 - One music choice for each detected emotion
-- Happy, Sad, Anxiety, Calm, and Anger mappings
+- Happy, Sad, Anxious, Calm, and Anger mappings
 - Track preview
 - Genre and intensity preferences
 - Reset to recommended defaults
@@ -234,7 +234,7 @@ Use a consistent visual language without implying that an emotion is "bad":
 | --- | --- | --- |
 | Happy | Warm yellow | Gentle ambient or preference |
 | Sad | Soft blue | Uplifting major-mode music |
-| Anxiety | Muted violet | Slow calming instrumental |
+| Anxious | Muted violet | Slow calming instrumental |
 | Calm | Teal/green | Nature or ambient soundscape |
 | Anger | Warm coral | Gentle, low-arousal music |
 
