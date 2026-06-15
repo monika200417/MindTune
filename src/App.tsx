@@ -75,7 +75,7 @@ const navItems = [
 ];
 
 const pageTitles: Record<string, { title: string; eyebrow: string }> = {
-  "/dashboard": { title: "Good morning, Abhi", eyebrow: "Wednesday, June 10" },
+  "/dashboard": { title: "Good morning, Moni", eyebrow: "Wednesday, June 10" },
   "/dashboard/live": { title: "Live session", eyebrow: "Real-time EEG insights" },
   "/dashboard/sessions": { title: "Session history", eyebrow: "Your MindTune activity" },
   "/dashboard/analytics": { title: "Wellness trends", eyebrow: "Last 7 days" },
